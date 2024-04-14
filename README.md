@@ -1,6 +1,7 @@
 # Ex04 Places Around Me
 ## Date: 14/04/2024
 
+
 ## AIM
 To develop a website to display details about the places around my house.
 
@@ -530,9 +531,10 @@ rit.html
 </body>
 </html>
 ```
-
-
 # OUTPUT:
+
+![alt text](<kavin/mapapp/static/map.png (2).png>)
+
 ![alt text](kavin/mapapp/static/kings.png)
 ![alt text](kavin/mapapp/static/REC.png)
 ![alt text](kavin/mapapp/static/sec.png)
