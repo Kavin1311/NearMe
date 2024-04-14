@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Coordinates Finder</title>
+    <style>
+        #image-container {
+            position: relative;
+        }
+        #coordinates {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">
+        <font color="red"><b>Colleges Around Me</b></font>
+    </h1>
+    <h3>
+        <center>
+        <font color="blue"><b>T.KAVINAJAI (212223100020)</b></font>
+        </center>
+    </h3>
+    <center>
+        <div id="image-container">
+            <img id="image" src="map.png (2).png" alt="Your Image" width="1450" usemap="#college">
+            <div id="coordinates"></div>
+        </div>
+        <map name="college">
+            <area shape="poly" coords="678,472 657,488 625,489 622,478" href="1.html" title="Kings Engineering College">
+            <area shape="poly" coords=" 829,  387 , 850, 391 , 898, 389 ,866, 381" href="6.html"title="RAJALAKSHMI ENGINEERING COLLEGE">
+            <area shape="poly" coords="965,203 940,235 964,235 1001,243" href="3.html" title="SAVEETHA ENGINEERING COLLEGE">
+            <area shape="poly" coords=" 1036,182, 996, 175 ,1015, 177 ,1057, 183" href="4.html" title="SAVEETHA SCHOOL OF ENGINEERING">
+            <area shape="poly" coords=" 938,  88 ,1009, 83 , 1025, 86, 16, 118" href="5.html" title="APOLLO ENGINEERING COLLEGE">
+            <area shape="poly" coords="1248,86 1299,78 1301,91 1352,78" href="rit.html" title="RAJALAKSHMI INSTITUTE OF TECHNOLOGY">
+            <area shape="poly" coords="1187,224 1184,214 1159,217 1137,220" href="7.html" title="LOYOLA INSTITUTE OF TECHNOLOGY">
+            
+    </center>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.getElementById('image');
+        var coordinatesDiv = document.getElementById('coordinates');
+        var coordinates = [];
+
+        image.addEventListener('click', function(event) {
+            var offsetX = event.offsetX;
+            var offsetY = event.offsetY;
+
+            coordinates.push({ x: offsetX, y: offsetY });
+            if (coordinates.length <= 4) {
+                coordinatesDiv.textContent += 'X' + coordinates.length + ': ' + offsetX + ', Y' + coordinates.length + ': ' + offsetY + ' ';
+            }
+
+            if (coordinates.length == 4) {
+                // Display the coordinates array in console
+                console.log(coordinates);
+            }
+        });
+    });
+    </script>
+</body>
+</html>
