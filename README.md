@@ -532,9 +532,7 @@ rit.html
 </html>
 ```
 # OUTPUT:
-
-![alt text](<kavin/mapapp/static/map.png (2).png>)
-
+![alt text](<kavin/mapapp/static/my map.png.png>)
 ![alt text](kavin/mapapp/static/kings.png)
 ![alt text](kavin/mapapp/static/REC.png)
 ![alt text](kavin/mapapp/static/sec.png)
